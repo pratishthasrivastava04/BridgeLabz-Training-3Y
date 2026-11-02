@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Table Filter</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px 16px; }
+    .container { max-width: 620px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    h1 { margin-top: 0; font-size: 22px; }
+    #searchInput { width: 100%; box-sizing: border-box; padding: 10px; font-size: 15px; border: 1px solid #bbb; border-radius: 6px; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; text-align: left; border-bottom: 1px solid #e3e3e3; }
+    th { background: #2d7ff9; color: #fff; }
+    #noResults { text-align: center; color: #e03c3c; font-weight: bold; padding: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Records</h1>
+    <input type="text" id="searchInput" placeholder="Search by name, branch or CGPA">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Branch</th>
+          <th>CGPA</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+        <tr><td>Pratishtha Srivastava</td><td>CSE (AI &amp; DS)</td><td>8.9</td></tr>
+        <tr><td>Aarav Sharma</td><td>CSE</td><td>8.4</td></tr>
+        <tr><td>Riya Verma</td><td>IT</td><td>9.1</td></tr>
+        <tr><td>Kabir Singh</td><td>ECE</td><td>7.8</td></tr>
+        <tr><td>Ananya Gupta</td><td>Mechanical</td><td>8.2</td></tr>
+        <tr><td>Rohan Mehta</td><td>Civil</td><td>7.5</td></tr>
+        <tr><td>Sneha Patel</td><td>IT</td><td>9.4</td></tr>
+        <tr><td>Vivaan Joshi</td><td>CSE</td><td>8.0</td></tr>
+      </tbody>
+    </table>
+
+    <p id="noResults" hidden>No results found</p>
+  </div>
+  <script src="table-filter.js"></script>
+</body>
+</html>

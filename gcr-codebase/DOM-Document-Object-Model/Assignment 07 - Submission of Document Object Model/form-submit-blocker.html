@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submit Blocker</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px 16px; }
+    .container { max-width: 420px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    h1 { margin-top: 0; font-size: 22px; }
+    .field { margin-bottom: 14px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input { width: 100%; box-sizing: border-box; padding: 10px; font-size: 15px; border: 1px solid #bbb; border-radius: 6px; }
+    input.invalid { border-color: #e03c3c; }
+    .error { color: #e03c3c; font-size: 13px; min-height: 16px; margin: 4px 0 0; }
+    button { width: 100%; padding: 11px; border: none; border-radius: 6px; background: #2d7ff9; color: #fff; font-size: 15px; cursor: pointer; }
+    #successMessage { margin-top: 14px; padding: 10px; border-radius: 6px; background: #e6f4ea; color: #1e6b34; font-weight: bold; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Register</h1>
+
+    <form id="registerForm" novalidate>
+      <div class="field">
+        <label for="nameInput">Name</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <p class="error" id="nameError"></p>
+      </div>
+
+      <div class="field">
+        <label for="emailInput">Email</label>
+        <input type="text" id="emailInput" placeholder="Enter your email">
+        <p class="error" id="emailError"></p>
+      </div>
+
+      <div class="field">
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" placeholder="At least 6 characters">
+        <p class="error" id="passwordError"></p>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="successMessage" hidden>Form Submitted Successfully</p>
+  </div>
+  <script src="form-submit-blocker.js"></script>
+</body>
+</html>

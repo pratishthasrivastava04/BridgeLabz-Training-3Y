@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Step Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px 16px; }
+    .container { max-width: 420px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    h1 { margin-top: 0; font-size: 22px; }
+    .progress { color: #666; margin-bottom: 16px; font-size: 14px; }
+    label { display: block; margin-bottom: 6px; font-weight: bold; }
+    input { width: 100%; box-sizing: border-box; padding: 10px; font-size: 15px; border: 1px solid #bbb; border-radius: 6px; }
+    .error { color: #e03c3c; font-size: 13px; min-height: 18px; margin: 6px 0 0; }
+    .buttons { display: flex; justify-content: space-between; margin-top: 16px; }
+    button { padding: 9px 18px; border: none; border-radius: 6px; font-size: 14px; color: #fff; background: #2d7ff9; cursor: pointer; }
+    #backBtn { background: #777; }
+    .summary p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <div class="progress" id="progress">Step 1 of 3</div>
+
+    <div id="formArea">
+      <div class="step" id="step1">
+        <label for="nameInput">Name</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+      </div>
+
+      <div class="step" id="step2" hidden>
+        <label for="emailInput">Email</label>
+        <input type="text" id="emailInput" placeholder="Enter your email">
+      </div>
+
+      <div class="step" id="step3" hidden>
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" placeholder="At least 6 characters">
+      </div>
+
+      <p class="error" id="errorMessage"></p>
+
+      <div class="buttons">
+        <button id="backBtn" hidden>Back</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <div class="summary" id="summary" hidden>
+      <h2>Summary</h2>
+      <p><strong>Name:</strong> <span id="summaryName"></span></p>
+      <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+      <p><strong>Password:</strong> <span id="summaryPassword"></span></p>
+    </div>
+  </div>
+  <script src="multi-step-form.js"></script>
+</body>
+</html>

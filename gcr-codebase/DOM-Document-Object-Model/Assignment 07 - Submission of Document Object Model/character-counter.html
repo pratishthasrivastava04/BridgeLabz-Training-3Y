@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Character Counter</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px 16px; }
+    .container { max-width: 520px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+    h1 { margin-top: 0; font-size: 22px; }
+    textarea { width: 100%; box-sizing: border-box; height: 140px; padding: 10px; font-size: 15px; border: 1px solid #bbb; border-radius: 6px; resize: vertical; }
+    .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+    #counter { padding: 6px 12px; border-radius: 6px; font-weight: bold; background: #e6f4ea; color: #1e6b34; }
+    #counter.warning { background: #fff3a8; color: #6b5900; }
+    #counter.limit { background: #e03c3c; color: #fff; }
+    #resetBtn { padding: 8px 16px; border: none; border-radius: 6px; background: #2d7ff9; color: #fff; cursor: pointer; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Live Character Counter</h1>
+    <textarea id="textBox" placeholder="Start typing (max 100 characters)"></textarea>
+    <div class="footer">
+      <span id="counter">Remaining: 100</span>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+  <script src="character-counter.js"></script>
+</body>
+</html>

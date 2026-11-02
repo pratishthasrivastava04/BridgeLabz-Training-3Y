@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Path and Coordinates Logger</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 30px 16px; text-align: center; }
+    #coordinates { font-size: 18px; margin-bottom: 14px; }
+    #box { position: relative; width: 400px; height: 400px; margin: 0 auto; background: #fff; border: 2px solid #2d7ff9; border-radius: 8px; overflow: hidden; cursor: crosshair; }
+    .dot { position: absolute; width: 12px; height: 12px; background: red; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    p.hint { color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Mouse Coordinates Logger</h1>
+  <div id="coordinates">clientX: -, clientY: -</div>
+  <div id="box"></div>
+  <p class="hint">Move the mouse inside the box. Double-click to drop a red dot.</p>
+  <script src="mouse-coordinates-logger.js"></script>
+</body>
+</html>

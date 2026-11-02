@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery with Modal Preview</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 40px 16px; }
+    h1 { text-align: center; }
+    .gallery { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .gallery img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .gallery img:hover { transform: scale(1.03); }
+    .modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center; }
+    .modal.hidden { display: none; }
+    .modal-content { max-width: 90%; max-height: 90%; border: 4px solid #fff; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/10/400/300" data-full="https://picsum.photos/id/10/1000/700" alt="Forest">
+    <img src="https://picsum.photos/id/11/400/300" data-full="https://picsum.photos/id/11/1000/700" alt="Lake">
+    <img src="https://picsum.photos/id/12/400/300" data-full="https://picsum.photos/id/12/1000/700" alt="Beach">
+    <img src="https://picsum.photos/id/13/400/300" data-full="https://picsum.photos/id/13/1000/700" alt="Coast">
+    <img src="https://picsum.photos/id/14/400/300" data-full="https://picsum.photos/id/14/1000/700" alt="Sea">
+    <img src="https://picsum.photos/id/15/400/300" data-full="https://picsum.photos/id/15/1000/700" alt="Waterfall">
+  </div>
+
+  <div class="modal hidden" id="modal">
+    <img class="modal-content" id="modalImage" src="" alt="Preview">
+  </div>
+
+  <script src="image-gallery-modal.js"></script>
+</body>
+</html>
