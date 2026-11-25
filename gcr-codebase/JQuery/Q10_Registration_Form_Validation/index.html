@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        input {
+            display: block;
+            margin: 12px 0;
+            padding: 10px;
+            width: 250px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="q10.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>User Registration</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Create Your Account</h2>
+
+            <form id="registerForm">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter Email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter Password">
+
+                <button type="submit">Register</button>
+
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section>
+            <h2>Test Scenarios</h2>
+            <ol>
+                <li>Empty name field</li>
+                <li>Invalid email format</li>
+                <li>Duplicate email</li>
+                <li>Password less than 8 characters</li>
+                <li>All fields valid</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Registration Form Validation using jQuery</p>
+    </footer>
+
+</body>
+</html>

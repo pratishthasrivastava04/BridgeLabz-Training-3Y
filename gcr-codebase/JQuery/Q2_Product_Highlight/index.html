@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Highlight</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            width: 180px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+            border: 2px solid orange;
+        }
+
+        .details {
+            display: none;
+            color: blue;
+        }
+
+        .selected {
+            background-color: pink;
+            border: 2px solid red;
+        }
+
+        .product[data-discount] {
+            border: 2px solid green;
+            background-color: #e8ffe8;
+        }
+
+        .favorite {
+            font-size: 22px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+        <p>Choose your favorite products</p>
+    </header>
+
+    <main>
+        <section class="products">
+
+            <article class="product" data-stock="yes">
+                <h3>Laptop</h3>
+                <p>Price: ₹50,000</p>
+                <p class="details">RAM: 16GB, Storage: 512GB SSD</p>
+                <span class="favorite">♡</span>
+            </article>
+
+            <article class="product" data-discount="20%" data-stock="yes">
+                <h3>Smartphone</h3>
+                <p>Price: ₹20,000</p>
+                <p class="details">Camera: 50MP, Battery: 5000mAh</p>
+                <span class="favorite">♡</span>
+            </article>
+
+            <article class="product" data-stock="no">
+                <h3>Headphones</h3>
+                <p>Price: ₹2,000</p>
+                <p class="details">Wireless Bluetooth Headphones</p>
+                <span class="favorite">♡</span>
+            </article>
+
+            <article class="product" data-discount="10%" data-stock="yes">
+                <h3>Smart Watch</h3>
+                <p>Price: ₹3,000</p>
+                <p class="details">Heart Rate Monitor, Fitness Tracker</p>
+                <span class="favorite">♡</span>
+            </article>
+
+            <article class="product" data-stock="yes">
+                <h3>Keyboard</h3>
+                <p>Price: ₹1,500</p>
+                <p class="details">Mechanical RGB Keyboard</p>
+                <span class="favorite">♡</span>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Online Shopping Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

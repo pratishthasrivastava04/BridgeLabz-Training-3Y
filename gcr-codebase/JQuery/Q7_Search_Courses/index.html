@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Courses</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+            margin: 10px;
+        }
+
+        .course {
+            background: white;
+            padding: 15px;
+            margin: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #count {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Learning Platform</h1>
+        <p>Search your favorite courses</p>
+    </header>
+
+    <main>
+
+        <section>
+            <input type="text" id="search"
+                   placeholder="Search courses...">
+
+            <button id="clear">Clear Search</button>
+
+            <p id="count">Total Courses: 5</p>
+        </section>
+
+        <section id="courseList">
+
+            <article class="course">
+                <h3>Java Programming</h3>
+                <p>Learn Java from beginner to advanced level.</p>
+            </article>
+
+            <article class="course">
+                <h3>Python Programming</h3>
+                <p>Learn Python and its libraries.</p>
+            </article>
+
+            <article class="course">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS and JavaScript.</p>
+            </article>
+
+            <article class="course">
+                <h3>Data Science</h3>
+                <p>Learn data analysis and machine learning.</p>
+            </article>
+
+            <article class="course">
+                <h3>Artificial Intelligence</h3>
+                <p>Learn AI and deep learning concepts.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Online Learning Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Subscription Panel</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .topic {
+            background: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Event Subscription Panel</h1>
+        <p>Manage your notification subscriptions</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Subscription Topics</h2>
+
+            <div id="topics">
+
+                <div class="topic">
+                    <h3>Technology Updates</h3>
+                    <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button>
+                    <button class="remove">Remove</button>
+                </div>
+
+                <div class="topic">
+                    <h3>Sports Updates</h3>
+                    <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button>
+                    <button class="remove">Remove</button>
+                </div>
+
+                <div class="topic">
+                    <h3>Education Updates</h3>
+                    <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button>
+                    <button class="remove">Remove</button>
+                </div>
+
+                <div class="topic">
+                    <h3>Business Updates</h3>
+                    <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button>
+                    <button class="remove">Remove</button>
+                </div>
+
+                <div class="topic">
+                    <h3>Entertainment Updates</h3>
+                    <button class="subscribe">Subscribe</button>
+                    <button class="unsubscribe">Unsubscribe</button>
+                    <button class="remove">Remove</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Add New Topic</h2>
+
+            <input type="text" id="newTopic"
+                   placeholder="Enter topic name">
+
+            <button id="addTopic">Add Topic</button>
+        </section>
+
+        <div id="message"></div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Subscription Panel</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

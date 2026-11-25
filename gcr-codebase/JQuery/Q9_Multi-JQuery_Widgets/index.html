@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi jQuery Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+
+        .dashboard {
+            display: flex;
+            gap: 20px;
+        }
+
+        .widget {
+            background: white;
+            padding: 20px;
+            border: 2px solid #ddd;
+            width: 250px;
+            text-align: center;
+        }
+
+        .active {
+            border: 3px solid blue;
+            background: #e6f0ff;
+        }
+
+        .slide {
+            display: none;
+            padding: 20px;
+            background: #dceeff;
+        }
+
+        .slide:first-child {
+            display: block;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #modal {
+            display: none;
+            background: white;
+            border: 2px solid black;
+            padding: 20px;
+            width: 250px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Multi-jQuery Dashboard</h2>
+
+    <div class="dashboard">
+
+        <div class="widget" id="carousel">
+            <h3>Carousel Slider</h3>
+
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+        </div>
+
+        <div class="widget" id="notification">
+            <h3>Notifications</h3>
+            <button id="showModal">Show Notification</button>
+        </div>
+
+        <div class="widget" id="tooltipWidget">
+            <h3>Tooltip Widget</h3>
+            <button title="This is a helpful tooltip">
+                Hover Me
+            </button>
+        </div>
+
+    </div>
+
+    <div id="modal">
+        <h3>Notification</h3>
+        <p>You have a new notification!</p>
+        <button id="closeModal">Close</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var jq1 = jQuery.noConflict();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        var jq2 = jQuery.noConflict();
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

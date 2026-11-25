@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive FAQ</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .faq {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .question {
+            cursor: pointer;
+            color: black;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            color: #444;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+        }
+
+        input {
+            padding: 8px;
+            width: 80%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions.</p>
+    </header>
+
+    <main>
+
+        <section class="faq-section">
+
+            <article class="faq">
+                <h3 class="question">1. What is HTML?</h3>
+                <div class="answer">
+                    HTML stands for HyperText Markup Language.
+                </div>
+            </article>
+
+            <article class="faq">
+                <h3 class="question">2. What is CSS?</h3>
+                <div class="answer">
+                    CSS is used to style HTML web pages.
+                </div>
+            </article>
+
+            <article class="faq">
+                <h3 class="question">3. What is JavaScript?</h3>
+                <div class="answer">
+                    JavaScript makes websites interactive.
+                </div>
+            </article>
+
+            <article class="faq">
+                <h3 class="question">4. What is jQuery?</h3>
+                <div class="answer">
+                    jQuery is a JavaScript library.
+                </div>
+            </article>
+
+            <article class="faq">
+                <h3 class="question">5. What is Bootstrap?</h3>
+                <div class="answer">
+                    Bootstrap is a CSS framework.
+                </div>
+            </article>
+
+        </section>
+
+        <section>
+            <h2>Ask Your Question</h2>
+
+            <label for="userInput">Enter your question:</label>
+            <input type="text" id="userInput"
+                   placeholder="Type your question here">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 FAQ Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

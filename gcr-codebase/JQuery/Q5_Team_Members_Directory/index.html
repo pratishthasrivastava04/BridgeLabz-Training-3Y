@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members Directory</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .department {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .employee {
+            background: #e8e8e8;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .manager {
+            background: #cce5ff;
+            font-weight: bold;
+        }
+
+        .contact {
+            display: none;
+            color: blue;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            background: lightgreen;
+            border: 2px solid green;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Team Members Directory</h1>
+        <p>Explore our company team structure</p>
+    </header>
+
+    <main>
+
+        <!-- IT Department -->
+        <section class="department">
+            <h2>IT Department</h2>
+
+            <div class="team">
+
+                <article class="employee manager">
+                    <h3>Rahul - Manager</h3>
+                    <p class="contact">Email: rahul@company.com</p>
+                </article>
+
+                <article class="employee">
+                    <h3>Aman - Developer</h3>
+                    <p class="contact">Email: aman@company.com</p>
+                </article>
+
+                <article class="employee">
+                    <h3>Rohit - Designer</h3>
+                    <p class="contact">Email: rohit@company.com</p>
+                </article>
+
+                <article class="employee">
+                    <h3>Priya - Tester</h3>
+                    <p class="contact">Email: priya@company.com</p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- HR Department -->
+        <section class="department">
+            <h2>HR Department</h2>
+
+            <div class="team">
+
+                <article class="employee manager">
+                    <h3>Neha - Manager</h3>
+                    <p class="contact">Email: neha@company.com</p>
+                </article>
+
+                <article class="employee">
+                    <h3>Simran - Recruiter</h3>
+                    <p class="contact">Email: simran@company.com</p>
+                </article>
+
+                <article class="employee">
+                    <h3>Vikas - Coordinator</h3>
+                    <p class="contact">Email: vikas@company.com</p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <button id="random">Random Employee</button>
+        <button id="collapse">Collapse / Expand Team</button>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Company Directory</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
